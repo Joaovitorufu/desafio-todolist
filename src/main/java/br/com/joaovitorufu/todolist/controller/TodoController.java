@@ -26,12 +26,12 @@ public class TodoController {
         return service.listAllTodo();
     }
 
-    @PostMapping
+    @PutMapping
     List<Todo> updateTodo(@RequestBody Todo todo){
         return service.updateTodo(todo);
     }
 
-    @PostMapping("{id}")
+    @DeleteMapping("{id}")
     List <Todo> deleteTodo(@PathVariable Long id){
         return service.deleteTodo(id);
     }
